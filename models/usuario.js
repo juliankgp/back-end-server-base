@@ -18,8 +18,8 @@ var usuarioSchema = new Schema({
     img: { type: String },
     role: { type: String, required: true, default: 'USER_ROLE', enum: rolesValidos },
 
-});
+}, { timestamps: true });
 
-usuarioSchema.plugin(uniqueValidator, { message: '{PATH} debe de ser unico' });
+usuarioSchema.plugin(uniqueValidator, { message: 'El {PATH} {VALUE} ya se encuentra registrado.' });
 
 module.exports = mongoose.model('Usuario', usuarioSchema);

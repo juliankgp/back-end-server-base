@@ -2,10 +2,6 @@ var jwt = require('jsonwebtoken');
 
 var SEED = require('../config/config').SEED;
 
-
-
-
-
 // =====================================================
 // Verificacion token 
 // =====================================================
