@@ -39,6 +39,7 @@ mongoose.connect('mongodb://localhost/hospitalDB',
         console.log('\x1b[32m Base de datos: \x1b[4m\x1b[31m%s\x1b[0m', 'Online');
     });
 
+    // No sera utilizado en esta caso pero se deja el registro de como hacerlo 
 // Server index config 
 // var serveIndex = require('serve-index');
 // app.use(express.static(__dirname + '/'));

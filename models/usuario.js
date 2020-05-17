@@ -17,6 +17,7 @@ var usuarioSchema = new Schema({
     password: { type: String, required: [true, 'La constraseña es necesaria.'] },
     img: { type: String },
     role: { type: String, required: true, default: 'USER_ROLE', enum: rolesValidos },
+    google: {type: Boolean, default: false}
 
 }, { timestamps: true });
 
