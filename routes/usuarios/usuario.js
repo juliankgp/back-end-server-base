@@ -59,9 +59,12 @@ app.get('/', (req, res, next) => {
 // =====================================================
 // Crear nuevo usuario 
 // =====================================================
-app.post('/', mdAutenticacion.verificaToken, (req, res) => {
+app.post('/',  (req, res) => {
 
     var body = req.body;
+    if (body.role) {
+        body.role = body.role.toUpperCase();
+    }
 
 
     var usuario = new Usuario({
@@ -70,7 +73,7 @@ app.post('/', mdAutenticacion.verificaToken, (req, res) => {
         email: body.email,
         password: bcrypt.hashSync(body.password, 10),
         img: body.img,
-        role: body.role.toUpperCase()
+        role: body.role
 
     });
 
